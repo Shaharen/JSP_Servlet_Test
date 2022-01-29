@@ -23,12 +23,12 @@ public class LoginCheck extends HttpServlet {
 		String pw = request.getParameter("pw");
 		
 		if (id.equals(check_id) && pw.equals(check_pw)) {
-			// ÀÏÄ¡ÇÏ¸é ¼¼¼ÇÀúÀå ÈÄ ¸ŞÀÎÀ¸·Î ÀÌµ¿
+			// ì¼ì¹˜í•˜ë©´ ì„¸ì…˜ ì €ì¥ í›„ ë©”ì¸ìœ¼ë¡œ ì´ë™
 			HttpSession session = request.getSession();
 			session.setAttribute("id", id);
 			response.sendRedirect("main.jsp");
 		} else {
-			// ·Î±×ÀÎ ÆûÀ¸·Î ÀÌµ¿
+			// ë¡œê·¸ì¸ í¼ìœ¼ë¡œ ì´ë™
 			response.sendRedirect("loginForm.html");
 		}
 		
